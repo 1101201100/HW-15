@@ -1,18 +1,21 @@
 .holder {
     display: flex;
     outline: solid black;
-    width: 300px;
+    width: 100px;
     flex-wrap: wrap;
     margin-left: 300px;
     margin-top: 200px;
+    height: 50px;
 }
 
 .item:nth-child(1) {
     background-color: red;
+    order: -2;
 }
 
 .item:nth-child(2) {
   background-color: yellow;
+  order: 1;
 }
 
 .item:nth-child(3) {
@@ -21,19 +24,29 @@
 
 .item:nth-child(4) {
  background-color: blue;
+ order: 2;
 }
 
 .item:nth-child(5) {
   background-color: green;
-  order: -2;
+  order: -1;
 }
 
 
 .item {
-    width: 45px;
+    width: 30px;
+    height: 25px;
+    text-align: center;
+    flex-grow: 1;
 }
 
-.item:nth-child(-n+2) {
+.item:nth-child(5) {
     flex-grow: 1.5;
     flex-basis: 45px;
 }  
+
+.item:first-child {
+  flex-grow: 1.5;
+  flex-basis: 45px;
+} 
+
